@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <div>
+            <div class="resp">
+                <label for="born">Ano de nascimento</label>
+                <input type="number" id="born" ><br>
+            </div>
+            
+            <div class="resp">
+                <label>Sexo</label>
+                <input type="radio" id="mas" name= "sexo" value="m">
+                <label for="mas">Masculino</label>
+
+                <input type="radio" id="fem" name= "sexo" value="f">
+                <label for="fem">Feminino</label><br>
+            </div>
+
+            <div class="resp" id="button">
+                <input type="button" value="Verificar" onclick="verificar()">
+            </div>
+        </div>
+
+        <div>
+            <div id="info"></div>
+            <div id="img">
+                <img id="foto"  src="idosa-mulher.jpeg" alt="Foto idosa">
+            </div>
+        </div>
+    </section>
+    <footer><a href="https://github.com/Karina-Meira">@Karina-Meira</a></footer>
+    <script src="ex03.js"></script>
+    <script src="ex04.js"></script>
+</body>
+</html>
