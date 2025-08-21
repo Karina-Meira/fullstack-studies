@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de inscrição</title>
+</head>
+<body>
+    <h1>Formulário de inscrição</h1>
+
+    <form>
+        <div>
+            <label for="nome">Nome:</label> 
+            <br>
+            <input type="text" id="nome"  name="nome"> 
+        </div>
+        <br>
+        <div>
+            <label for="email">Email:</label>
+            <br>
+            <input type="email" id="email" name="email">
+        </div>
+        <br>
+        <div>
+           <label for="whatsapp">WhatsApp:</label>
+            <br>
+            <input type="tel" id="whatsapp" name="whatsapp"> 
+        </div>
+        <br>
+        <div>
+            <label for="areaAtuacao">Área de Atuação:</label>
+            <br>
+            <input type="radio" id="desenvolvimento" name="areaAtuacao" value="desenvolvimento">
+            <label for="desenvolvimento">Desenvolvimento</label>
+            <input type="radio" id="qualityAssurance" name="areaAtuacao" value="qualityAssurance"> 
+            <label for="qualityAssurance">Quality Assurance</label>
+            <input type="radio" id="analiseDados" name="areaAtuacao" value="analiseDados">
+            <label for="analiseDados">Análise de Dados</label>
+            <input type="radio" id="infraestrutura" name="areaAtuacao" value="infraestrutura">
+            <label for="infraestrutura">Infraestrutura</label>
+        </div>
+        <br>
+        <div>
+             <label for="observacoes">Observações:</label>
+            <br>
+            <textarea name="observacoes" id="observacoes" cols="30" rows="3"></textarea>
+        </div>
+        <br>
+        <div>
+            <input type="checkbox" id="ofertas" name="ofertas" checked required>
+            <label for="ofertas">Deseja receber novidades e ofertas por email.</label>
+        </div>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

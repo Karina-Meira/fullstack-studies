@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio de tabelas</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 1.3em;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            width: 100px;
+            padding: 5px
+        }
+
+        .cnome {
+            background-color: blueviolet;
+        }
+
+        .cidade {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercicio de tabelas</h1>
+    <table>
+        <colgroup>
+            <col class="cnome">
+            <col class="csexo">
+            <col class="cidade">
+            <col class="cprofissao">
+        </colgroup>
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>F</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Marcos</td>
+            <td>M</td>
+            <td>45</td>
+            <td>Advogado</td>
+        </tr>
+        <tr>
+            <td>Fabio</td>
+            <td>M</td>
+            <td>39</td>
+            <td>Padeiro</td>
+        </tr>
+        <tr>
+            <td>Karina</td>
+            <td>F</td>
+            <td>20</td>
+            <td>Estudante</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Mono', monospace;
+}
+
+header {
+    text-align: center;
+    padding: 16px;
+}
+
+.feature, .catalogo, .cta, footer {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    margin: 20px;
+    border-radius: 25px;
+    padding: 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+h2 {
+   margin-bottom: 16px;
+   text-transform: capitalize;
+}
+
+.lista > li {
+    display: inline-block;
+    margin-top: 16px;
+}
+
+.lista > li + li {
+   margin-left: 10px;
+   margin-top: 16px;
+}
+
+.genero > a, .button-list > a {
+    background-color: aquamarine;
+    color: white;
+    border-radius: 25px;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.button-list > a {
+    background-color: black;
+    text-transform: uppercase;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+

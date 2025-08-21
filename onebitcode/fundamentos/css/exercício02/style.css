@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 32px; /*margem de cima*/
+    margin-left: 32px; /*margem da esquerda*/
+}
+
+ul {
+    display: inline-block;
+}
+
+li {
+    background-color: #1c1a1d; /*cor de fundo das caixas*/
+    border: 4px solid transparent; /*cor da borda (transparente pq...*/
+    border-radius: 4px; /*arredondamento da borda*/
+    color: #fff; /*cor da fonte*/
+    cursor: pointer; /*é usada para definir o estilo do cursor quando ele passa sobre um elemento, indicando que o elemento é clicável, como um link ou um botão. Quando essa propriedade é aplicada a um elemento, o cursor do mouse muda para uma mão, sugerindo que o usuário pode interagir com o elemento.*/
+    display: inline-block; /*é usada em CSS para fazer com que um elemento seja renderizado como um bloco, mas mantenha a propriedade de nível de linha, permitindo que outros elementos fiquem ao lado dele em linha.*/
+    margin-top: 32px; /*margim de cima de cada bloco*/
+    margin-left: 32px; /*margem da esquerda*/
+    padding: 32px; /*preenchimento do blobo*/
+    height: 250px; /*altura do bloco*/
+    width: 400px;
+}
+
+.selected {
+    background-color: #363338;
+    border: 4px solid #0088d8;
+}
+
+.hidden {
+    display: none;
+}

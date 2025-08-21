@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box</title>
+    <style>
+        .container {
+            background-color: aqua;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .itens {
+            background-color: blueviolet;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 250px;
+            
+        }
+
+        #cx1 {
+            flex-shrink: 3;
+            flex-grow: 0;
+        }
+
+        #cx2 {
+            flex-shrink: 1;
+            flex-grow: 2;
+        }
+
+        #cx3 {
+            flex-shrink: 1;
+            flex-grow: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="itens" id="cx1">1</div>
+        <div class="itens" id="cx2">2</div>
+        <div class="itens" id="cx3">3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+/*Quando adicionamos determinados estilos a um elemento pai ele pode ser herdado pelos filhos, como neste cabeçalho:*/
+header {
+    background-color: #232323;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/*Também podemos ver esse exemplo com elemento mais internos:*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #232323;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+h1 {
+    font-family: serif;
+}
+
+.parent {
+    font-size: 1.25rem;
+    color: #f64348;
+}
+
+.child {
+    font-size: 2rem;
+    color: #00ff9f;
+}

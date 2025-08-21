@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box</title>
+    <style>
+        .container {
+            background-color: aqua;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .itens {
+            background-color: blueviolet;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 250px;
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="itens">1</div>
+        <div class="itens">2</div>
+        <div class="itens">3</div>
+    </div>
+</body>
+</html>

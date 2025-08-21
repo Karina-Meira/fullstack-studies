@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            color: aqua;
+            text-decoration: none; /*tira o sublinhado*/
+            font-weight: bolder;
+        }
+
+        a:visited { /*muda de cor quando o site ja foi aberto */
+            color: blueviolet; 
+        }
+
+        a:hover { /* fica preto e sublinhado quando passa o mouse  */
+            color: black;
+            text-decoration: underline;
+        }
+        .especial {
+            background-color: chocolate;
+            color: rgb(196, 179, 189);
+        }
+        a:active { /* quando clica fica amarelo e some */
+            color: yellow;
+        }
+        a::after { /* adiciona alguma coisa após*/
+            content: ' [Link]';
+            text-decoration: none;
+            font-weight: normal;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="httos://gustavoguanabara.github.io" target="_blank" class="especial">Repositório github</a></li>
+        <li><a href="https://youtube.com" target="_blank">Youtube</a></li>
+        <li><a href="https://www.cursoemvideo.com" target="_blank">Site curso em video</a></li>
+    </ul>
+</body>
+</html>
