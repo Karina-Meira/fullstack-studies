@@ -1,36 +1,56 @@
 function verificar(){
     let nasc = Number(document.querySelector('#born').value)
-    let sexo = document.querySelector('input[name="sexo"]:checked').value
+    let sexoSelecionado = document.querySelector('input[name="sexo"]:checked').value
     let res = document.querySelector('#info')
     let anoAtual = new Date().getFullYear()
-    let idade = anoAtual - nasc
-    let img = document.querySelector('#foto')
 
-    if (sexo === 'm' && idade < 15){
-        res.innerHTML = `Detectamos menino com ${idade} anos`
-        img.src = 'menino.jpeg'
-    } else if (sexo === 'f' && idade < 15) {
-        res.innerHTML = `Detectamos menina com ${idade} anos`
-        img.src = 'menina.jpeg'
-    } else if (sexo === 'm' && idade >= 18 && idade < 25) {
-        res.innerHTML = `Detectamos jovem masculino com ${idade}`
-        img.src = 'homem-jovem.jpeg'
-    } else if (sexo === 'f' && idade >= 18 && idade < 25) {
-        res.innerHTML = `Detectamos jovem feminina com ${idade}`
-        img.src = 'jovem-mulher.jpeg'
-    } else if (sexo === 'm' && idade >=26 && idade < 50) {
-        res.innerHTML = `Detectamos homem com ${idade}`
-        img.src = 'homem.jpeg'
-    } else if (sexo === 'f' && idade >=26 && idade < 50) {
-        res.innerHTML = `Detectamos mulher com ${idade}`
-        img.src = 'mulher.jpeg'
-    } else if (sexo === 'm' && idade >= 50) {
-        res.innerHTML = `Detectamos idoso com ${idade}`
-        img.src = 'idoso-homem.jpeg'
-    } else if (sexo === 'f' && idade >= 50) {
-        res.innerHTML = `Detectamos idosa com ${idade}`
-        img.src = 'idosa-homem.jpeg'
-    } else {
-        window.alert('Tente novamente...')
+
+    //validação
+    if (!nasc || !sexoSelecionado || nasc > anoAtual) {
+        window.alert('Por favor, preencha os dados corretamente.')
+        return
     }
+
+    let idade = anoAtual - nasc;
+
+    let descricao = '';
+    let img = document.createElement('img')
+    img.setAttribute('id', 'foto')
+
+    if (idade < 15) {
+        if (sexoSelecionado === 'm') {
+            descricao = 'menino'
+            img.setAttribute('src', 'menino.jpeg')
+        } else {
+            descricao = 'menina'
+            img.setAttribute('src', 'menina.jpeg')
+        }
+    } else if (idade < 25) {
+        if (sexoSelecionado == 'm') {
+            descricao = 'jovem masculino'
+            img.setAttribute('src', 'homem-jovem.jpeg')
+        } else {
+            descricao = 'jovem feminina'
+            img.setAttribute('src', 'jovem-mulher.jpeg')
+        }
+    } else if (idade < 50) {
+        if (sexoSelecionado === 'm') {
+            descricao = 'homem'
+            img.setAttribute('src', 'homem.jpeg')
+        } else {
+            descricao = 'mulher'
+            img.setAttribute('src', 'mulher.jpeg')
+        }
+    } else {
+        if (sexoSelecionado === 'm') {
+            descricao = 'idoso'
+            img.setAttribute('src', 'idoso-.jpeg')
+        } else {
+            descricao = 'idosa'
+            img.setAttribute('src', 'idosa-mulher.jpeg')
+        }
+    }
+
+    res.innerHTML = `Detectamos ${descricao} com ${idade} anos`
+    res.appendChild(img)
 }
