@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(47, 145, 112);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    margin: auto;
+    border-radius: 20px;
+    width: 500px;
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
