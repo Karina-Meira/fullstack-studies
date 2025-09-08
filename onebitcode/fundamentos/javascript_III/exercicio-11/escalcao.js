@@ -1,4 +1,5 @@
  let lista = []
+
 function escalar() {
     const namePlayer = document.getElementById('name-player').value
     const numberPlayer = Number(document.getElementById('number-player').value)
@@ -29,44 +30,32 @@ function escalar() {
     }
 }
 
-
-
-
-
-
-
-
 function remover() {
+    const numberShirt = Number(document.getElementById('number-shirt').value)
     const escalacao = document.getElementById('escalacao')
 
-    const confirmacao = confirm(
+    const indiceRemove = lista.findIndex(n => n.numero === numberShirt)
+    
+    if(indiceRemove !== -1) {
+        const player = lista[indiceRemove]
+
+        confirmacao = confirm(
         `Tem certeza que quer excluir esse jogador?
-        Jogador: ${namePlayer}
-        Número: ${numberPlayer}
-        Posição: ${positionPlayer}`
+        Jogador: ${player.nome}
+        Número: ${player.numero}
+        Posição: ${player.posicao}`
     )
+        if(confirmacao) {
+            lista.splice(indiceRemove, 1)
 
-    const players = document.getElementsByTagName('ul')
+            escalacao.innerHTML = lista
+            .map(j => `<p>Jogador: ${j.nome}, Número: ${j.numero}, Posição: ${j.posicao}</p>`)
+            .join('')
 
-    escalacao.removeChild(players[players.length - 1])
+        document.getElementById('number-shirt').value = ''
+        }    
+    } else {
+        alert('Jogador não encontrado!')
+    }
 }
 
-/*
-        const ul = document.createElement('ul')
-    
-        const nameLi = document.createElement('li')
-        nameLi.innerText = `Jogador ${namePlayer}`
-        const numberLi = document.createElement('li')
-        numberLi.innerText = `Número ${numberPlayer} `
-        const position = document.createElement('li')
-        position.innerText = `Posição => ${positionPlayer}`
-        ul.appendChild(nameLi)
-        ul.appendChild(numberLi)
-        ul.appendChild(position)
-
-        escalacao.append(ul)   
-        
-        namePlayer.value = ''
-        numberPlayer.value = ''
-        positionPlayer.value = ''
-        */
