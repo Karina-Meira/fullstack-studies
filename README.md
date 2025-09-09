@@ -11,19 +11,6 @@ Here I organize all the content I learn from different courses and practice sess
 	•	Frontend: HTML, CSS, JavaScript, TypeScript, React, Next.js, Bootstrap, Sass
 	•	Backend: Node.js, Express, SQL, MongoDB
 
-📂 Repository Structure
-fullstack-studies/
-│
-├── CursoEmVideo/        # Exercises and projects from Curso em Vídeo
-│   ├── HTML-CSS/
-│   └── JavaScript/
-│
-├── OneBitCode/          # Exercises and projects from OneBitCode
-│   ├── HTML-CSS/
-│   └── JavaScript/
-│
-└── README.md            # Project documentation
-
 🚀 Goal
 
 Track my progress in web development and build a strong foundation to become a Fullstack Developer.
