@@ -8,13 +8,21 @@
 <body>
     <h1>Cadastro de Devs</h1>
     <hr>
-
+    
     <form id="form">
-        <label for="name">Nome:</label>
-        <input type="text" name="name" id="name">
-        <input type="submit" value="Nova tecnologia">
+        <label>Nome completo:
+        <input type="text" name="name">
+        </label>
         <br><br>
+
+        <button type="button" id="addTech">Adicionar tecnologia</button>
+        <br><br>
+
+        <div id="techs"></div><br>
+
+        <button type="submit">Cadastrar</button>
     </form>
+
     
     <script src="cadastro-de-dev.js"></script>
 </body>
