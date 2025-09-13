@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Tic-Tac-Toe</h1>
+
+        <input type="text" id="namePlayer1" placeholder="Jogador 1 (X)">
+        <input type="text" id="namePlayer2" placeholder="jogador 2 (O)">
+        <button onclick="startGame()">Iniciar</button>
+
+        <p id="turn"></p>
+        <div class="board" id="board"></div>
+        <p id="message"></p>
+        <button onclick="restartGame()">Reinicia</button>
+
+    </main>
+
+    <script src="ti-tac-toe.js"></script>
+</body>
+</html>
