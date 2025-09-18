@@ -1,0 +1,142 @@
+/* Reset básico: remove margens e paddings padrão dos navegadores
+   e faz o tamanho dos elementos considerar a borda dentro da largura */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variáveis globais de cores (facilita trocar temas depois) */
+:root {
+  --bg-color: #212529;      /* Cor de fundo */
+  --border-color: #666;     /* Cor das bordas */
+  --font-color: #f1f5f9;    /* Cor do texto */
+  --primary-color: #4dff91; /* Cor principal (botões, destaques) */
+  --error-color: #ff0043;   /* Cor de erro */
+}
+
+/* Estilo geral do corpo da página */
+body {
+  background-color: var(--bg-color);  /* Usa a cor de fundo definida no :root */
+  color: var(--font-color);           /* Texto na cor definida */
+  font-family: "Ubuntu", sans-serif;  /* Fonte usada no site */
+}
+
+/* Conteúdo principal */
+main {
+  display: block;
+  margin: 0 auto;          /* Centraliza o conteúdo */
+  max-width: 40rem;        /* Largura máxima */
+  padding: 0 1.5rem 2.5rem;/* Espaçamento interno */
+  position: relative;      /* Permite posicionamento relativo */
+}
+
+/* Cabeçalho da calculadora */
+header {
+  padding: 2rem 0;   /* Espaço acima e abaixo */
+}
+
+
+/* Botão de trocar tema */
+#themeSwitcher {
+  background-color: var(--bg-color);  /* Fundo igual ao fundo da página */
+  border: .125rem solid var(--font-color); /* Borda na cor do texto */
+  color: var(--font-color);           /* Texto na cor da fonte */
+}
+
+/* Efeito ao passar o mouse no botão de tema */
+#themeSwitcher:hover {
+  background-color: var(--font-color); /* Fundo muda para cor da fonte */
+  color: var(--bg-color);              /* Texto muda para a cor de fundo */
+}
+
+/* Estilo padrão dos botões */
+button {
+  background-color: var(--primary-color); /* Fundo na cor principal */
+  border: none;
+  border-radius: .25rem;                  /* Bordas arredondadas */
+  font-weight: 700;                       /* Texto em negrito */
+  padding: .5rem 1rem;                    /* Espaço interno */
+  transition: .15s;                       /* Animação suave em hover */
+}
+
+/* Estilo dos campos de input (onde digita e mostra resultado) */
+input {
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color); /* Borda visível */
+  border-radius: .5rem;                  /* Cantos arredondados */
+  color: var(--font-color);              /* Texto claro */
+  display: block;
+  font-size: 1.75rem;                    /* Fonte grande */
+  margin: 0 auto;                        /* Centralizado */
+  padding: 1rem;                         /* Espaçamento interno */
+  text-align: end;                       /* Texto alinhado à direita */
+  width: 100%;                           /* Ocupa toda a largura */
+}
+
+/* Área dos botões de números e operadores */
+#keys {
+  display: grid; /* Usa grid para organizar botões */
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 colunas iguais */
+  gap: 1rem; /* Espaço entre os botões */
+  margin: 2rem 0; /* Espaço acima e abaixo */
+}
+
+/* Botões dentro da área #keys */
+#keys button {
+  color: var(--bg-color);   /* Texto escuro para contraste */
+  cursor: pointer;          /* Mostra a mãozinha no hover */
+  font-size: 1.5rem;        /* Texto maior */
+  padding: 1rem;            /* Mais espaçamento */
+}
+
+/* Efeito hover nos botões da calculadora */
+#keys button:hover {
+  filter: brightness(0.8);  /* Escurece um pouco ao passar o mouse */
+}
+
+/* Ajuste do campo do resultado */
+#result {
+  border-width: 2px 2px 2px 0;   /* Remove a borda do lado esquerdo */
+  border-radius: 0 .5rem .5rem 0;/* Bordas arredondadas só na direita */
+}
+
+/* Botão de copiar resultado */
+#copyToClipboard {
+  background-color: transparent;        /* Fundo transparente */
+  border: solid var(--border-color);    /* Borda padrão */
+  border-width: 2px;                    /* Espessura da borda */
+  border-radius: .5rem 0 0 .5rem;       /* Bordas arredondadas só à esquerda */
+  color: var(--font-color);             /* Texto claro */
+  cursor: pointer;
+  display: block;
+  height: 4.25rem;                      /* Altura fixa */
+  width: 6rem;                          /* Largura fixa */
+}
+
+/* Classes utilitárias para flexbox */
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;   /* Alinha verticalmente */
+}
+
+.justify-between {
+  justify-content: space-between; /* Espaça elementos nos extremos */
+}
+
+/* Se der erro na conta, o campo do resultado fica vermelho */
+.error {
+  background-color: var(--error-color);
+}
+
+/* Estilo de sucesso (usado no botão Copy → Copied!) */
+.success {
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}
+
+
+
