@@ -1,5 +1,6 @@
 // Para utilizar a brobrescrita de métodos basta reescrever o método na classe filha utilizando o mesmo nome:
 
+
 class Vehicle {
     move() {
         console.log('O veículo está se movendo.')
