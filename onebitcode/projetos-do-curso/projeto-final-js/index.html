@@ -4,19 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finanças Pessoais</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Finanças Pessoais</h1>
-        <div id="amount">
-            
+        <div id="balance">
+            <p>Saldo total:</p>
         </div>
     </header>
     <main>
-
-    </main>
+        <div>
+            <form>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" placeholder="Nome">
+                <label for="amount">Valor:</label>
+                <input type="number" id="amount" placeholder="Valor">
+                <input type="button" value="Adicionar">
+            </form>
+            <p id="status-message"></p>
+        </div>
+        <div id="transactions">
+            <h2>Transações</h2>
+        </div>
+    </main> 
     <footer>
 
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,14 @@
+.trans {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0.5rem;
+}
+.trans-name {
+  font-weight: 500;
+}
+.trans-amount.positive {
+  color: green;
+}
+.trans-amount.negative {
+  color: red;
+}
