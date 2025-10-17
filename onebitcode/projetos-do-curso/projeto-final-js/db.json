@@ -1,34 +1,39 @@
 {
   "transactions": [
     {
-      "name": "Freela",
-      "amount": "300",
-      "id": "1"
-    },
-    {
       "name": "Salário",
-      "amount": "3200",
+      "amount": 3610,
       "id": "2"
     },
     {
       "name": "Conta de água",
-      "amount": -60,
+      "amount": -70,
       "id": "3"
     },
     {
       "name": "Conta de luz",
-      "amount": -159,
+      "amount": -160,
       "id": "4"
-    },
-    {
-      "id": "e67d",
-      "name": "Freelancer",
-      "amount": 100
     },
     {
       "id": "b613",
       "name": "mercado",
       "amount": -300
+    },
+    {
+      "id": "f5d5",
+      "name": "Internet",
+      "amount": 350
+    },
+    {
+      "id": "bc52",
+      "name": "GAS",
+      "amount": -300
+    },
+    {
+      "id": "2c61",
+      "name": "aluguel",
+      "amount": -4000
     }
   ]
 }

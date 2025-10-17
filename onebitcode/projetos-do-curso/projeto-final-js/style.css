@@ -1,14 +1,179 @@
-.trans {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 0.5rem;
+/* ---------------------------- */
+/*   BASE - Reset e estrutura   */
+/* ---------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
+
+body {
+  background: #f3f4f6;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+
+/* ---------------------------- */
+/*            TÍTULO            */
+/* ---------------------------- */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* ---------------------------- */
+/*          SALDO TOTAL         */
+/* ---------------------------- */
+#balance {
+  display: block;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  transition: color 0.3s ease;
+}
+
+/* ---------------------------- */
+/*           FORMULÁRIO         */
+/* ---------------------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+input:focus {
+  border-color: #00a86b;
+  outline: none;
+}
+
+button[type="submit"] {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #00a86b;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+button[type="submit"]:hover {
+  background: #00945e;
+  transform: scale(1.02);
+}
+
+/* ---------------------------- */
+/*       LISTA DE TRANSAÇÕES    */
+/* ---------------------------- */
+#transactions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Cada transação individual */
+.trans {
+  background: #f9fafb;
+  padding: 14px 16px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 6px solid #00a86b;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trans:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
 .trans-name {
   font-weight: 500;
 }
-.trans-amount.positive {
-  color: green;
+
+.trans-amount {
+  font-weight: 600;
+  min-width: 90px;
+  text-align: right;
 }
-.trans-amount.negative {
-  color: red;
+
+/* ---------------------------- */
+/*         BOTÕES DE AÇÃO       */
+/* ---------------------------- */
+.trans button {
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
+
+.trans-edit {
+  background: #facc15; /* amarelo */
+  color: #333;
+  margin-right: 8px;
+}
+
+.trans-edit:hover {
+  background: #eab308;
+}
+
+.trans-delete {
+  background: #ef4444;
+  color: #fff;
+}
+
+.trans-delete:hover {
+  background: #dc2626;
+}
+
+/* ---------------------------- */
+/*         RESPONSIVIDADE       */
+/* ---------------------------- */
+@media (max-width: 480px) {
+  .container {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  #balance {
+    font-size: 1.4rem;
+  }
+
+  .trans {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .trans-amount {
+    text-align: left;
+  }
+}
+
